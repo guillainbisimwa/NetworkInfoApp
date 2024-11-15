@@ -54,6 +54,7 @@ const App = () => {
       }
     } catch (error) {
       console.error("Error fetching network info:", error);
+      Toast.show("Error fetching network info");
     }
     fetchLocation();
   };
@@ -65,6 +66,7 @@ const App = () => {
       setLocation(loc);
     } catch (error) {
       console.error("Error fetching location:", error);
+      Toast.show("Error fetching location");
     }
   };
 
@@ -89,6 +91,8 @@ const App = () => {
       fetchSavedData(); // Refresh the saved data list
     } catch (error) {
       console.error("Error saving data to Firebase:", error);
+      Toast.show("Error saving data to Firebase");
+
     }
   };
 
@@ -100,6 +104,7 @@ const App = () => {
       setSavedData(data);
     } catch (error) {
       console.error("Error fetching saved data:", error);
+      Toast.show("Error fetching saved data");
     }
   };
 

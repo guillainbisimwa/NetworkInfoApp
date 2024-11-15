@@ -14,14 +14,24 @@
     },
     "ios": {
       "bundleIdentifier": "com.wezalab.NetworkInfoApp",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app requires access to your location to provide Wi-Fi signal strength and location data.",
+        "NSLocationAlwaysUsageDescription": "This app requires access to your location to provide Wi-Fi signal strength and location data."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.wezalab.NetworkInfoApp"
+      "package": "com.wezalab.NetworkInfoApp",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_WIFI_STATE",
+        "CHANGE_WIFI_STATE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
