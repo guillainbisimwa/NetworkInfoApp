@@ -46,6 +46,9 @@
     },
     "updates": {
       "url": "https://u.expo.dev/4561f63a-1734-4f35-96db-940188daafbf"
+    },
+    "developmentClient": {
+      "enabled": true
     }
   }
 }

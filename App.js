@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
+import { View, Text, Button, FlatList, StyleSheet, ScrollView } from 'react-native';
 import WifiManager from "react-native-wifi-reborn";
 import * as Location from 'expo-location';
 import { initializeApp } from "firebase/app";
@@ -26,10 +26,12 @@ const App = () => {
   const [signalStrength, setSignalStrength] = useState(null);
   const [location, setLocation] = useState(null);
   const [savedData, setSavedData] = useState([]);
+  const [availableNetworks, setAvailableNetworks] = useState([]);
 
   useEffect(() => {
     requestPermissions();
     fetchSavedData();
+    fetchAvailableNetworks();
   }, []);
 
   // Request permissions for location
@@ -108,6 +110,17 @@ const App = () => {
     }
   };
 
+  // Fetch available Wi-Fi networks
+  const fetchAvailableNetworks = async () => {
+    try {
+      const networks = await WifiManager.loadWifiList();
+      setAvailableNetworks(networks);
+    } catch (error) {
+      console.error("Error fetching available networks:", error);
+      Toast.show("Error fetching available networks");
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Wi-Fi Signal Strength and Location</Text>
@@ -119,6 +132,15 @@ const App = () => {
         </Text>
       )}
       <Button title="Save Data" onPress={saveData} />
+      <Text style={styles.subHeader}>Available Networks:</Text>
+      <ScrollView>
+        {availableNetworks.map((network, index) => (
+          <View key={index} style={styles.item}>
+            <Text>SSID: {network.SSID}</Text>
+            <Text>Signal Strength: {network.level} dBm</Text>
+          </View>
+        ))}
+      </ScrollView>
       <Text style={styles.subHeader}>Saved Data:</Text>
       <FlatList
         data={savedData}

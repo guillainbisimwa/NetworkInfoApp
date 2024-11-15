@@ -2100,6 +2100,16 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
+ajv@8.11.0:
+  version "8.11.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.11.0.tgz#977e91dd96ca669f54a11e23e378e33b884a565f"
+  integrity sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    json-schema-traverse "^1.0.0"
+    require-from-string "^2.0.2"
+    uri-js "^4.2.2"
+
 anser@^1.4.9:
   version "1.4.10"
   resolved "https://registry.npmjs.org/anser/-/anser-1.4.10.tgz"
@@ -3063,6 +3073,39 @@ expo-constants@~17.0.0, expo-constants@~17.0.3:
     "@expo/config" "~10.0.4"
     "@expo/env" "~0.4.0"
 
+expo-dev-client@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/expo-dev-client/-/expo-dev-client-5.0.1.tgz#d5d55657a21f8f4d8ac7dedaa4eb8629ea612c5e"
+  integrity sha512-PAaemvP5E5eoLkoTvqKhO6VWGuu8wyK4SYZ+Agey06LmZn9mTauB4+eFXGjOE8fGTSK68QmfZ1YYpC0WiBIglg==
+  dependencies:
+    expo-dev-launcher "5.0.13"
+    expo-dev-menu "6.0.8"
+    expo-dev-menu-interface "1.9.1"
+    expo-manifests "~0.15.0"
+    expo-updates-interface "~1.0.0"
+
+expo-dev-launcher@5.0.13:
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/expo-dev-launcher/-/expo-dev-launcher-5.0.13.tgz#b2231f30a703739abb33ae0cf8bec799d07aab3d"
+  integrity sha512-UJC8fvG0fYAWHN6wtpvuZbGA7+FwrQpOoktpwyU8FHMNBtvWLFQ9a2q+PCLjtFYntufkl9aWof/m38b3OiR6EQ==
+  dependencies:
+    ajv "8.11.0"
+    expo-dev-menu "6.0.8"
+    expo-manifests "~0.15.0"
+    resolve-from "^5.0.0"
+
+expo-dev-menu-interface@1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/expo-dev-menu-interface/-/expo-dev-menu-interface-1.9.1.tgz#744588fa19c38fe75443a0d8150a8b2d0dfb6b8d"
+  integrity sha512-YciUyAwSfloU76JAc18Jvuv8JOZHBLM1E/DwAqNC/rLg5ju76CaSS0Hx1Q4MyF79yi3G/y9o34K0hJmCCyQ9LQ==
+
+expo-dev-menu@6.0.8:
+  version "6.0.8"
+  resolved "https://registry.yarnpkg.com/expo-dev-menu/-/expo-dev-menu-6.0.8.tgz#057334b826d061fb521c1cb584b6102faea32423"
+  integrity sha512-+cfPrBW8U0pEfJW5bqO+sHyWyb0I8/i4OIT+GgMAJZMqfK983mz6zPQyeb9nAhJnNI/3Q7kPnd2ibkOlNbN3SA==
+  dependencies:
+    expo-dev-menu-interface "1.9.1"
+
 expo-eas-client@~0.13.0:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/expo-eas-client/-/expo-eas-client-0.13.1.tgz#ebca627f3f58a54906394eb3f5d22f41a1822618"
@@ -3189,6 +3232,11 @@ exponential-backoff@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.1.tgz"
   integrity sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==
+
+fast-deep-equal@^3.1.1:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
+  integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
 
 fast-glob@^3.2.5, fast-glob@^3.2.9, fast-glob@^3.3.2:
   version "3.3.2"
@@ -3993,6 +4041,11 @@ json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz"
   integrity sha512-mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==
+
+json-schema-traverse@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
+  integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
 
 json5@^2.2.3:
   version "2.2.3"
@@ -4988,7 +5041,7 @@ prompts@^2.3.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.8.1:
+prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -5023,7 +5076,7 @@ pump@^3.0.0:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
-punycode@^2.1.1:
+punycode@^2.1.0, punycode@^2.1.1:
   version "2.3.1"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
@@ -5078,12 +5131,27 @@ react-is@^18.0.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
+react-native-animatable@1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.3.tgz#a13a4af8258e3bb14d0a9d839917e9bb9274ec8a"
+  integrity sha512-2ckIxZQAsvWn25Ho+DK3d1mXIgj7tITkrS4pYDvx96WyOttSvzzFeQnM2od0+FUMzILbdHDsDEqZvnz1DYNQ1w==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-dotenv@^3.4.11:
   version "3.4.11"
   resolved "https://registry.yarnpkg.com/react-native-dotenv/-/react-native-dotenv-3.4.11.tgz#2e6c4eabd55d5f1bf109b3dd9141dadf9c55cdd4"
   integrity sha512-6vnIE+WHABSeHCaYP6l3O1BOEhWxKH6nHAdV7n/wKn/sciZ64zPPp2NUdEUf1m7g4uuzlLbjgr+6uDt89q2DOg==
   dependencies:
     dotenv "^16.4.5"
+
+react-native-modal@^13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-13.0.1.tgz#691f1e646abb96fa82c1788bf18a16d585da37cd"
+  integrity sha512-UB+mjmUtf+miaG/sDhOikRfBOv0gJdBU2ZE1HtFWp6UixW9jCk/bhGdHUgmZljbPpp0RaO/6YiMmQSSK3kkMaw==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-animatable "1.3.3"
 
 react-native-network-info@^5.2.1:
   version "5.2.1"
@@ -5963,6 +6031,13 @@ update-browserslist-db@^1.1.1:
   dependencies:
     escalade "^3.2.0"
     picocolors "^1.1.0"
+
+uri-js@^4.2.2:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
+  integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
+  dependencies:
+    punycode "^2.1.0"
 
 util-deprecate@~1.0.1:
   version "1.0.2"
