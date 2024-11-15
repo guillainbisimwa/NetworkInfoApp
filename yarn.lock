@@ -5010,6 +5010,11 @@ react-native-network-info@^5.2.1:
   resolved "https://registry.npmjs.org/react-native-network-info/-/react-native-network-info-5.2.1.tgz"
   integrity sha512-iam74xXtrSqqZurCl1/bSjZ9jXcsJY84g7brx1/4uVGCY26c6m+4CArHNSHOsz5ATg2NQT+81sjNy0KlCPyK4g==
 
+react-native-wifi-reborn@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/react-native-wifi-reborn/-/react-native-wifi-reborn-4.13.0.tgz#4211d7e1869d7ab13bd3b025cf8fc3bbea17169e"
+  integrity sha512-n6qp9KYBpARWpK06Gqh7dXXJVH58TBNAokTOgzkkLYKBdemcZDMDUGtzddbn6wCIceFelwy4eIX1AE3Ot29IaQ==
+
 react-native@0.76.1:
   version "0.76.1"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.76.1.tgz"
