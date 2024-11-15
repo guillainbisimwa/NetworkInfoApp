@@ -5832,6 +5832,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+toastify-react-native@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/toastify-react-native/-/toastify-react-native-5.0.2.tgz#88dfef1fe7cb2921aeaddf98a6b12e82bbacd91b"
+  integrity sha512-zogCZGhX0EraBf9p5wMi+fqjyWRdd4pV+cVtPshpWD7KyKJcwQFhcr8ZieCBQ0qFr5Y3k5vgJ5I9nP2rEOMOvg==
+
 toidentifier@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.tgz"

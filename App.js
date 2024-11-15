@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, FlatList, StyleSheet, Alert } from 'react-native';
+import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
 import WifiManager from "react-native-wifi-reborn";
 import * as Location from 'expo-location';
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import Toast from 'toastify-react-native';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -35,7 +36,7 @@ const App = () => {
   const requestPermissions = async () => {
     const { status } = await Location.requestForegroundPermissionsAsync();
     if (status !== 'granted') {
-      Alert.alert('Permission Error', 'Location permission is required to collect data.');
+      Toast.show('Location permission is required to collect data.');
       return;
     }
     fetchNetworkInfo();
@@ -70,7 +71,7 @@ const App = () => {
   // Save collected data to Firebase
   const saveData = async () => {
     if (!wifiDetails.ssid || !signalStrength || !location) {
-      Alert.alert("Data Missing", "Please ensure all data (Wi-Fi, Signal Strength, Location) is available.");
+      Toast.show("Please ensure all data (Wi-Fi, Signal Strength, Location) is available.");
       return;
     }
     const data = {
@@ -84,7 +85,7 @@ const App = () => {
     };
     try {
       await addDoc(collection(db, "networkDetails"), data);
-      Alert.alert("Success", "Data saved successfully!");
+      Toast.show("Data saved successfully!");
       fetchSavedData(); // Refresh the saved data list
     } catch (error) {
       console.error("Error saving data to Firebase:", error);
